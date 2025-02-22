@@ -6,6 +6,8 @@ public partial class Plane : CharacterBody2D
     const float GRAVITY = 800.0f;
     const float POWER = -450.0f;
 
+    [Export] private AnimationPlayer _animationPlayer;
+
     // Called when the node enters the scene tree for the first time.
     public override void _Ready() { }
 
@@ -18,6 +20,7 @@ public partial class Plane : CharacterBody2D
         if (Input.IsActionJustPressed("fly"))
         {
             velocity.Y = POWER;
+            _animationPlayer.Play("power");
         }
 
         Velocity = velocity;
