@@ -73,7 +73,7 @@ _data = {
 "power": SubResource("Animation_lmx04")
 }
 
-[node name="Plane" type="CharacterBody2D" node_paths=PackedStringArray("_animationPlayer", "_planeSprite")]
+[node name="Plane" type="CharacterBody2D" node_paths=PackedStringArray("_animationPlayer", "_planeSprite") groups=["plane"]]
 script = ExtResource("1_knrw2")
 _animationPlayer = NodePath("AnimationPlayer")
 _planeSprite = NodePath("AnimatedSprite2D")

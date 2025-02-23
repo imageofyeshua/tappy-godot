@@ -35,7 +35,7 @@ public partial class Plane : CharacterBody2D
         }
     }
 
-    private void Die()
+    public void Die()
     {
         SetPhysicsProcess(false);
         _planeSprite.Stop();
