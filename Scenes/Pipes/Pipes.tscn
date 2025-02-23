@@ -9,10 +9,10 @@ z_index = 2
 script = ExtResource("1_k358x")
 _visibleOnScreenNotifier = NodePath("VisibleOnScreenNotifier2D")
 
-[node name="Pipe" parent="." instance=ExtResource("2_4rm3n")]
+[node name="LowerPipe" parent="." instance=ExtResource("2_4rm3n")]
 position = Vector2(0, 80)
 
-[node name="Pipe2" parent="." instance=ExtResource("2_4rm3n")]
+[node name="UpperPipe" parent="." instance=ExtResource("2_4rm3n")]
 position = Vector2(0, -80)
 rotation = 3.14159
 

@@ -20,9 +20,19 @@ public partial class Game : Node2D
         SpawnPipes();
     }
 
+    private void StopPipes()
+    {
+        _spawnTimer.Stop();
+        foreach (Pipes pipe in _pipesHolder.GetChildren())
+        {
+            pipe.SetProcess(false);
+        }
+    }
+
     private void GameOver()
     {
         GD.Print("Game Over");
+        StopPipes();
     }
 
     private void SpawnPipes()
