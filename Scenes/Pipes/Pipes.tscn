@@ -4,13 +4,10 @@
 [ext_resource type="Script" path="res://Scenes/Pipes/Pipes.cs" id="1_k358x"]
 [ext_resource type="PackedScene" uid="uid://d18nscedd7onb" path="res://Scenes/Pipe/Pipe.tscn" id="2_4rm3n"]
 
-[node name="Pipes" type="Node2D" node_paths=PackedStringArray("_visibleOnScreenNotifier", "_upperPipe", "_lowerPipe", "_laser")]
+[node name="Pipes" type="Node2D" node_paths=PackedStringArray("_visibleOnScreenNotifier")]
 z_index = 2
 script = ExtResource("1_k358x")
 _visibleOnScreenNotifier = NodePath("VisibleOnScreenNotifier2D")
-_upperPipe = NodePath("UpperPipe")
-_lowerPipe = NodePath("UpperPipe")
-_laser = NodePath("Laser")
 
 [node name="LowerPipe" parent="." instance=ExtResource("2_4rm3n")]
 position = Vector2(0, 80)
