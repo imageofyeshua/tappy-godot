@@ -73,9 +73,10 @@ _data = {
 "power": SubResource("Animation_lmx04")
 }
 
-[node name="Plane" type="CharacterBody2D" node_paths=PackedStringArray("_animationPlayer")]
+[node name="Plane" type="CharacterBody2D" node_paths=PackedStringArray("_animationPlayer", "_planeSprite")]
 script = ExtResource("1_knrw2")
 _animationPlayer = NodePath("AnimationPlayer")
+_planeSprite = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.75, 0.75)
