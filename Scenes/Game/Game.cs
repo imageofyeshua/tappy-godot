@@ -3,9 +3,6 @@ using System;
 
 public partial class Game : Node2D
 {
-    private static readonly PackedScene MAIN_SCENE =
-        GD.Load<PackedScene>("res://Scenes/Main/Main.tscn");
-
     [Export] private Marker2D _spawnUpper;
     [Export] private Marker2D _spawnLower;
     [Export] private Node2D _pipesHolder;
@@ -64,7 +61,7 @@ public partial class Game : Node2D
 
     private void ChangeToMain()
     {
-        GetTree().ChangeSceneToPacked(MAIN_SCENE);
+        GameManager.LoadMain();
     }
 
     public float GetSpawnY()
