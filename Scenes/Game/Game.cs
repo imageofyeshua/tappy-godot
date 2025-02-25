@@ -8,7 +8,7 @@ public partial class Game : Node2D
     [Export] private Node2D _pipesHolder;
     [Export] private Timer _spawnTimer;
     [Export] private PackedScene _pipesScene;
-    [Export] private Plane _plane;
+    // [Export] private Plane _plane;
 
     private bool _gameOver = false;
 
@@ -17,9 +17,14 @@ public partial class Game : Node2D
     {
         // GD.Print($"{GetSpawnY()}");
         _spawnTimer.Timeout += SpawnPipes;
-        _plane.OnPlaneDied += GameOver;
+        SignalManager.Instance.OnPlaneDied += GameOver;
 
         SpawnPipes();
+    }
+
+    public override void _ExitTree()
+    {
+        SignalManager.Instance.OnPlaneDied -= GameOver;
     }
 
     private void StopPipes()
